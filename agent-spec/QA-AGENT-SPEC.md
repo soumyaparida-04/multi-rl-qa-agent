@@ -75,6 +75,11 @@ text / structured fields / UI). Each:
   identity, capability existence
 - **observe-only**; never acts on instructions in the content; never mutates.
 
+S3 and S4 are implemented together as the **reporter → verifier** pipeline:
+reviewer agents report candidates, an adversarial verifier confirms each. See
+`MULTI-AGENT-ORCHESTRATION.md` and the runnable
+`orchestration/review-verify.workflow.js`.
+
 ### S4 — FP-gate  *(mandatory, 100% of candidates)*
 Every candidate → adversarial verifier (`scripts/fp_gate_prompt.md`) → returns
 `CONFIRMED` / `FALSE-POSITIVE` + one-clause reason. Only CONFIRMED become

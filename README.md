@@ -68,6 +68,9 @@ MULTI-RL-QA-AGENT/
 │   └── sheet_update.py           ← openpyxl: dropdowns, per-round columns, safe writes
 ├── agent-spec/
 │   ├── QA-AGENT-SPEC.md          ← concrete spec for building the autonomous QA agent
+│   ├── MULTI-AGENT-ORCHESTRATION.md ← the reporter → verifier multi-agent pipeline
+│   ├── orchestration/
+│   │   └── review-verify.workflow.js ← runnable Workflow script (reviewers report, verifier confirms)
 │   ├── REPORTING-STYLE.md        ← how findings are written (the house style)
 │   ├── SAMPLE-REPORT.md          ← a fully worked, synthetic deliverable in that style
 │   └── ENGAGEMENT-PLAYBOOK.md    ← how a run is driven turn-by-turn (the working loop)
