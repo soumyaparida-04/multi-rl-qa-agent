@@ -1,0 +1,49 @@
+{
+  "_comment": "Copy to qa-config.json and fill in from the environment brief. Everything here is environment-specific; the checkers are not.",
+
+  "persona": {
+    "name": "Priya Raman",
+    "role": "Engineering Manager",
+    "seniority": "EM, 2 teams, ~11 reports",
+    "start_date_in_org": "2024-03-04"
+  },
+
+  "persona_start": "2024-03-04",
+  "environment_today": "2026-09-17",
+
+  "expected_apps": ["jira", "linear", "github", "slack", "notion",
+                    "calendar", "gmail", "confluence", "loom"],
+  "accepted_gaps": [],
+  "min_records_per_app": 5,
+
+  "roster": [
+    {"name": "Priya Raman", "email": "priya.raman@northgate.test",
+     "handle": "priya", "role": "Engineering Manager", "kind": "person"},
+    {"name": "Dan Okonkwo", "email": "dan.okonkwo@northgate.test",
+     "handle": "dano", "role": "Staff Engineer", "kind": "person"},
+    {"name": "Northgate Systems", "kind": "org"},
+    {"name": "Harbour Migration", "kind": "programme"}
+  ],
+
+  "allowed_domains": ["northgate.test", "northgate.internal"],
+
+  "forbidden_org_names": ["Atlassian", "Datadog", "Salesforce", "Stripe",
+                          "Snowflake", "Okta", "PagerDuty"],
+
+  "domain_vocabulary": ["Harbour Migration", "shard", "rollout", "SLO",
+                        "on-call", "incident", "sprint", "retro"],
+  "domain_apps": ["jira", "linear", "confluence", "notion"],
+
+  "capabilities": {
+    "sprint planning and tracking": ["sprint", "backlog", "story point", "epic"],
+    "code review workflow": ["pull request", "review", "approve", "merge"],
+    "incident response": ["incident", "postmortem", "on-call", "sev"],
+    "1:1s and people management": ["1:1", "feedback", "growth", "career"],
+    "performance review cycle": ["performance", "review cycle", "calibration",
+                                 "rating"],
+    "hiring and headcount": ["headcount", "interview", "offer", "candidate"],
+    "roadmap and planning": ["roadmap", "quarter", "okr", "priority"],
+    "async demos": ["demo", "walkthrough", "recording", "loom"]
+  },
+  "require_multi_app_capabilities": true
+}

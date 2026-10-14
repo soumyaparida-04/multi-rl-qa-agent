@@ -1,0 +1,79 @@
+{
+  "_readme": "EM-persona draft. Fields marked REPLACE_ME must come from your brief -- everything else is a reasonable default for an Engineering Manager environment across these nine apps. The capability list is the part that matters most: it is what the coverage checker measures the environment against, and what the client report cites as the standard.",
+
+  "persona": {
+    "name": "REPLACE_ME",
+    "role": "Engineering Manager",
+    "seniority": "EM — owns 1-2 teams, ~8-12 reports, reports to a Director",
+    "scope_notes": "Writes about tradeoffs, unblocking, risk, headcount and delivery dates. Does not write implementation detail like an IC, or company strategy like a VP."
+  },
+
+  "persona_start": "REPLACE_ME_YYYY-MM-DD",
+  "environment_today": "REPLACE_ME_YYYY-MM-DD",
+
+  "expected_apps": ["jira", "linear", "github", "slack", "notion",
+                    "calendar", "gmail", "confluence", "loom"],
+  "accepted_gaps": [],
+  "min_records_per_app": 8,
+
+  "_roster_note": "One entry per persona AND per fictional company/programme. 'kind' drives the category-mismatch check: person | org | programme | product.",
+  "roster": [
+    {"name": "REPLACE_ME", "email": "REPLACE_ME", "handle": "REPLACE_ME",
+     "role": "Engineering Manager", "kind": "person"},
+    {"name": "REPLACE_ME", "email": "REPLACE_ME", "handle": "REPLACE_ME",
+     "role": "Staff Engineer", "kind": "person"},
+    {"name": "REPLACE_ME", "email": "REPLACE_ME", "handle": "REPLACE_ME",
+     "role": "Senior Engineer", "kind": "person"},
+    {"name": "REPLACE_ME", "email": "REPLACE_ME", "handle": "REPLACE_ME",
+     "role": "Engineer", "kind": "person"},
+    {"name": "REPLACE_ME", "email": "REPLACE_ME", "handle": "REPLACE_ME",
+     "role": "Product Manager", "kind": "person"},
+    {"name": "REPLACE_ME", "email": "REPLACE_ME", "handle": "REPLACE_ME",
+     "role": "Director of Engineering", "kind": "person"},
+    {"name": "REPLACE_ME_COMPANY", "kind": "org"},
+    {"name": "REPLACE_ME_VENDOR", "kind": "org"},
+    {"name": "REPLACE_ME_PROGRAMME", "kind": "programme"},
+    {"name": "REPLACE_ME_PRODUCT", "kind": "product"}
+  ],
+
+  "allowed_domains": ["REPLACE_ME.test", "REPLACE_ME.internal"],
+
+  "_forbidden_note": "Real vendors that tend to survive scrubbing because they read as generic. Extend with anything in your brief's tech stack.",
+  "forbidden_org_names": [
+    "Atlassian", "Datadog", "Salesforce", "Stripe", "Snowflake", "Okta",
+    "PagerDuty", "Twilio", "Segment", "Auth0", "LaunchDarkly", "New Relic",
+    "Splunk", "MongoDB", "Databricks", "HashiCorp", "CircleCI", "Vercel",
+    "Zendesk", "Workday", "Greenhouse", "Lattice", "Culture Amp"
+  ],
+
+  "_domain_note": "Vocabulary that must survive scrubbing. If none of it appears in a record from domain_apps, the scrubber probably ate it.",
+  "domain_vocabulary": [
+    "sprint", "backlog", "epic", "story point", "retro", "standup",
+    "on-call", "incident", "postmortem", "SLO", "SLA", "error budget",
+    "rollout", "cutover", "migration", "deprecation", "runbook",
+    "code review", "pull request", "merge", "revert", "hotfix",
+    "1:1", "calibration", "headcount", "roadmap", "OKR", "quarter"
+  ],
+  "domain_apps": ["jira", "linear", "confluence", "notion", "github"],
+
+  "_capabilities_note": "A capability counts as evidenced when a record matches at least half its keywords. These are the EM workflows a client will walk through in a demo -- each one should leave a trail in more than one app.",
+  "capabilities": {
+    "sprint planning and tracking": ["sprint", "backlog", "story point", "epic"],
+    "daily standup and status": ["standup", "blocked", "update", "yesterday"],
+    "code review workflow": ["pull request", "review", "approve", "merge"],
+    "release and deployment": ["release", "deploy", "rollback", "version"],
+    "incident response": ["incident", "postmortem", "on-call", "sev"],
+    "1:1s and people management": ["1:1", "feedback", "growth", "career"],
+    "performance review cycle": ["performance", "calibration", "rating", "self-review"],
+    "hiring and headcount": ["headcount", "interview", "offer", "candidate"],
+    "roadmap and quarterly planning": ["roadmap", "quarter", "okr", "priority"],
+    "cross-team dependency management": ["dependency", "blocked on", "handoff", "alignment"],
+    "technical decision records": ["decision", "tradeoff", "proposal", "rfc"],
+    "async demos and walkthroughs": ["demo", "walkthrough", "recording", "loom"],
+    "meeting cadence and scheduling": ["sync", "agenda", "invite", "reschedule"],
+    "onboarding a new engineer": ["onboarding", "buddy", "ramp", "first week"],
+    "budget and vendor management": ["budget", "contract", "renewal", "spend"],
+    "escalation to leadership": ["escalate", "director", "risk", "slip"]
+  },
+  "require_multi_app_capabilities": true
+}
